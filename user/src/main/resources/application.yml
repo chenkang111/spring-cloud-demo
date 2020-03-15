@@ -1,0 +1,16 @@
+server:
+  #默认端口
+  port: 8001
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    #代表得发现服务端
+    name: user
+eureka:
+  client:
+    serviceUrl:
+      # 访问路径要后缀eureka 大坑
+      defaultZone: http://localhost:8761/eureka/eureka/
+

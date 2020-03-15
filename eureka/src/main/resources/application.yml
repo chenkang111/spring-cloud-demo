@@ -1,0 +1,33 @@
+#服务配置
+server:
+  #默认端口
+  port: 8761
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /eureka
+spring:
+  application:
+    #代表得注册服务端
+    name: server
+eureka:
+  server:
+    #自我保护关掉或者调低 false
+    enable-self-preservation: true
+  instance:
+    #注册服务器名称
+    hostname: localhost
+    #自我检测评率（默认三十）
+    lease-renewal-interval-in-seconds: 50
+    #允许使用Ip地址
+    prefer-ip-address: true
+  client:
+    #自己本身就是服务端素以我不用取注册
+    register-with-eureka: false
+    #检索服务用得本身就是服务注册得
+    fetch-registry: false
+    #管理中心访问页面
+    serviceUrl:
+      #多注册中心的时候要相互指向  来监控信息
+      defaultZone: http://localhost:8761/eureka/
+

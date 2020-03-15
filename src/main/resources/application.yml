@@ -1,0 +1,17 @@
+#服务配置
+server:
+  #默认端口
+  port: 9001
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    #代表得注册发现端名称
+    name: product
+eureka:
+  client:
+    #管理中心访问页面
+    serviceUrl:
+      defaultZone: http://localhost:8761/
+
